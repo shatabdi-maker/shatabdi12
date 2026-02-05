@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shatabdee - Web Developer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+    
+</head>
+<body>
+
+<div class="container">
+    <aside>
+        <div class="profile">
+            <!-- Replace with your photo URL -->
+            <img src="image/untitled.jpg" alt="Shatabdee">
+            <h1>Shatabdee Talukder</h1>
+            <p>Web Developer</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="https://your-cv-link-here.pdf" target="_blank"> CV</a> </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <!-- Hero -->
+        <section id="hero" class="hero">
+            <h1>Hello, I'm<h2>Shatabdee Talukder</h2> </h1>
+            <p>Full-stack web developer specializing in modern, responsive websites and applications. I turn ideas into clean, performant digital experiences.</p>
+            <button class="btn cv-btn" onclick="viewCV()"> Resume</button>
+            <button class="btn cv-btn" onclick="downloadCV()">Download Resume </button>
+        </section>
+        <!-- About Me -->
+<section id="about-portfolio" style="padding: 6rem 2rem; " >
+  <div style="max-width: 1400px; margin: 0 auto;">
+    <div style="display: flex;  gap: 4rem; flex-wrap: wrap; margin-bottom: 6rem; justify-content: center;">
+      <div style="flex: 1; min-width: 300px;">
+        <div style="position: relative; display: inline-block;">
+          <img class="image"  src="image/my.jpg"  style=" width: 80%; max-width: 380px; border-radius: 100px; ; box-shadow: 0 20px 40px rgba(143, 138, 143, 0.3);">
+        </div>
+      </div>
+
+      <div style="flex: 1.5; min-width: 300px;" >
+        <h2 class="about" style="font-size: 2.8rem; margin-bottom: 1.5rem; background: linear-gradient(90deg, #5b036f, #db05bb); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          About Me
+        </h2>
+        <p style="font-size: 1.2rem; color: #cbd5e1; margin-bottom: 1.5rem; line-height: 1.8;">
+          I'm Shatabdee, a passionate full-stack web developer from Bangladesh. 
+          I love turning ideas into clean, fast, and user-friendly digital products using modern technologies like HTML, CSS, JavaScript, PHP, Laravel, MySQL, and more.
+        </p>
+        <p style="font-size: 1.1rem; color: #94a3b8;">
+          Focused on responsive design, performance optimization, and delivering real business value.
+        </p>
+
+        <div class="hir" style="margin-top: 2rem; display: flex; gap: 1.2rem; flex-wrap: wrap;" >
+          <a href="#contact" class="btn" style="background: linear-gradient(90deg, #531745, #150811); color: white; padding: 1rem 1.5rem; border-radius: 50px; text-decoration: none; font-size:20px; font-weight: 600; box-shadow: 0 10px 25px rgba(135, 0, 135, 0.4); transition: 0.3s;">Hire Me</a>
+        </div>
+      </div>
+    </div>
+
+        <!-- Logo Slider (clients / tech stack) -->
+        <div class="logo-slider">
+            <div class="slider-track">
+                <!-- Duplicate for seamless loop -->
+                <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML">
+                <img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS">
+                <img src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg" alt="JavaScript">
+                <img src="image/php.png" alt="PHP">
+                <img src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg" alt="Laravel">
+                <img src="image/sql.png" alt="MySQL">
+                <img src="image/tailwind.png" >
+                <img src="image/wordpress.png" >
+
+
+                <!-- Duplicate set -->
+                <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML">
+                <img src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS">
+                <img src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg" alt="JavaScript">
+                <img src="image/php.png" alt="PHP">
+                <img src="https://cdn.worldvectorlogo.com/logos/laravel-2.svg" alt="Laravel">
+                <img src="image/sql.png" alt="MySQL">
+                <img src="image/tailwind.png" >
+                <img src="image/wordpress.png" >           
+             </div>
+        </div>
+           <!-- Skills -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="grid">
+                <div class="card"><h3>HTML & CSS</h3><p>Modern, responsive layouts with Tailwind / Bootstrap CSS</p></div>
+                <div class="card"><h3>JavaScript</h3><p>Interactive features, DOM manipulation, ES6+</p></div>
+                <div class="card"><h3>PHP & Laravel</h3><p>Backend logic, MVC applications, REST APIs</p></div>
+                <div class="card"><h3>MySQL</h3><p>Database design, queries, optimization</p></div>
+                <div class="card"><h3>Wordpress</h3><p>custom themes, Elementor/Pro, WooCommerce & performance optimization.</p></div>
+
+            </div>
+        </section>
+
+    <!-- Services -->
+        <section id="services">
+            <h2>Services</h2>
+            <div class="grid">
+                <div class="card"><h3>Web Development</h3><p>Custom websites & web apps</p></div>
+                <div class="card"><h3>Frontend Design</h3><p>Responsive UI/UX with modern trends</p></div>
+                <div class="card"><h3>Backend Solutions</h3><p>PHP, Laravel, APIs, databases</p></div>
+                <div class="card"><h3>E-commerce Development</h3><p> PHP, Laravel , MySQL, RESTful APIs and responsive frontend</p></div>
+
+            </div>
+        </section>
+
+
+    <!-- Portfolio -->
+    
+<section class="projects">
+  <h2>My Projects</h2> 
+<div class="cards1">
+  
+
+  <article class="card1" tabindex="0">
+    <div class="thumb"><img src="image/project3.png"></div>
+    <div class="info">
+      <h3>University Website</h3>
+      <p>Develop secure and scalable online stores with product management, payment gateways, and order tracking.</p>
+    </div>
+    <div class="meta">
+      <div class="tag">Website</div>
+      <a class="link  view" href="https://shatabdi-maker.github.io/university_project/" aria-label="View project">View</a>
+    </div>
+  </article>
+
+  <article class="card1" tabindex="0">
+    <div class="thumb"><img src="image/copy1.jpg" alt="Project 3"></div>
+    <div class="info">
+      <h3>VegFruit Cart</h3>
+      <p>Backend dashboard for order tracking and inventory — built with PHP & Laravel.</p>
+    </div>
+    <div class="meta">
+      <div class="tag">Website</div>
+      <a class="link view" href="https://shatabdi-maker.github.io/fruitcart/" aria-label="View project">View</a>
+    </div>
+
+  </article>
+  <article class="card1" tabindex="0">
+    <div class="thumb"><img src="image/copy.jpg"></div>
+    <div class="info">
+      <h3>Coffee Beans</h3>
+      <p>Minimal one-page landing for espresso products — responsive layout..</p>
+    </div>
+    <div class="meta">
+      <div class="tag">Website</div>
+      <a class="link view" href="https://shatabdi-maker.github.io/coffee/" aria-label="View project">View</a>
+    </div>
+  </article>
+</div>
+</section>
+
+    
+
+   
+
+    <!-- View All Button -->
+    <div style="text-align: center; margin-top: 4rem;">
+      <a href="#projects" class="btn" style="background: linear-gradient(90deg, #7e5675, #29042a); color: white; padding: 1.2rem 3rem; border-radius: 50px; text-decoration: none; font-size: 1.2rem; font-weight: 600; box-shadow: 0 10px 30px rgba(103, 73, 93, 0.4);">View All Projects</a>
+    </div>
+
+  </div>
+</section>
+
+        
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>Let’s Work Together</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="6" required></textarea>
+                <button type="submit" onclick="sendEmailForm()">Send Message <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </section>
+        <footer style="background: #27091e; padding: 3rem 2rem 2rem; text-align: center; color: #524650;  border-radius: 50px;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+    
+    <!-- Social Media Icons -->
+    <div class="social-icons" style=" margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+      <a href="https://www.facebook.com/profile.php?id=61581964647795" target="_blank" style="color: #e9e9ef; font-size: 1.8rem; transition: all 0.3s; hover: border-bottom:2px solid parpel">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="linkedin.com/in/shatabdee-talukder-476136283/" target="_blank" style="color: #e2e3e8; font-size: 1.8rem; transition: all 0.3s;">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/shatabdi-maker/" target="_blank" style="color: #f5ebeb; font-size: 1.8rem; transition: all 0.3s;">
+        <i class="fab fa-github"></i>
+      </a>
+      
+    </div>
+
+    <!-- Copyright & Name -->
+    <p style="margin: 0; font-size: 0.95rem;">
+      © 2026 <span style="color: #cabaca; font-weight: 600;">Shatabdee</span>. All rights reserved.
+    </p>
+
+  </div>
+</footer>
+    </main>
+</div>
+<script>
+    function viewCV() {
+      window.open("cv.pdf", "_blank");
+    }
+
+    function downloadCV() {
+      const link = document.createElement("a");
+      link.href = "cv.pdf";
+      link.download = "shatabdee Cv.pdf";   // ডাউনলোড হওয়ার সময় এই নামে সেভ হবে
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+    /*mail*/
+    function sendEmailForm() {
+  const to = "talukdershatabdee@gmail.com";
+  const sub = document.getElementById("subject").value;
+  const bod = document.getElementById("body").value;
+  window.location.href = `mailto:${to}?subject=${encodeURIComponent(sub)}&body=${encodeURIComponent(bod)}`;
+}
+  </script>
+
+</body>
+</html>
