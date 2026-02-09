@@ -180,15 +180,25 @@
         
 
         <!-- Contact -->
-        <section id="contact">
-            <h2>Let’s Work Together</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="6" required></textarea>
-                <button type="submit" onclick="sendEmailForm()">Send Message <i class="fas fa-paper-plane"></i></button>
-            </form>
-        </section>
+       <section id="contact">
+    <h2>Let’s Work Together</h2>
+    <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+        <button type="submit">
+            Send Message <i class="fas fa-paper-plane"></i>
+        </button>
+        <div id="loader" style="display:none;margin-top:10px;">Sending...</div>
+        <p id="successMsg" style="display:none;color:green;margin-top:10px;">
+            Thanks! Your message has been sent successfully.
+        </p>
+        <p id="errorMsg" style="display:none;color:red;margin-top:10px;">
+            Oops! Something went wrong. Please try again.
+        </p>
+    </form>
+</section>
+
         <footer style="background: #27091e; padding: 3rem 2rem 2rem; text-align: center; color: #524650;  border-radius: 50px;">
   <div style="max-width: 1200px; margin: 0 auto;">
     
@@ -229,12 +239,49 @@
       document.body.removeChild(link);
     }
     /*mail*/
-    function sendEmailForm() {
-  const to = "talukdershatabdee@gmail.com";
-  const sub = document.getElementById("subject").value;
-  const bod = document.getElementById("body").value;
-  window.location.href = `mailto:${to}?subject=${encodeURIComponent(sub)}&body=${encodeURIComponent(bod)}`;
-}
+   (function(){
+    emailjs.init("6nqY6Brr_VWrZEvwa");
+})();
+
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    // Hide previous messages
+    document.getElementById("successMsg").style.display = "none";
+    document.getElementById("errorMsg").style.display = "none";
+
+    // Show loader
+    const loader = document.getElementById("loader");
+    loader.style.display = "block";
+
+    // Basic front-end validation
+    const name = this.name.value.trim();
+    const email = this.email.value.trim();
+    const message = this.message.value.trim();
+
+    if(!name || !email || !message){
+        loader.style.display = "none";
+        document.getElementById("errorMsg").textContent = "Please fill in all fields.";
+        document.getElementById("errorMsg").style.display = "block";
+        return;
+    }
+
+    emailjs.sendForm(
+        "service_yzf7hzk",
+        "template_socslnd",
+        this
+    ).then(function() {
+        loader.style.display = "none";
+        document.getElementById("successMsg").style.display = "block";
+        document.getElementById("contactForm").reset();
+    }, function(error) {
+        loader.style.display = "none";
+        document.getElementById("errorMsg").textContent = "Failed to send message. Please try again.";
+        document.getElementById("errorMsg").style.display = "block";
+        console.log("EmailJS error:", error);
+    });
+});
+
   </script>
 
 </body>
