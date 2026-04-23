@@ -288,11 +288,14 @@ img {
         
        
     
+  /* =========================
+   MOBILE RESPONSIVE FIX
+========================= */
   @media (max-width: 1024px) {
-            aside { width: 220px; }
-            main { margin-left: 220px; width: calc(100% - 220px); padding: 2rem; }
+          aside { width: 220px; }
+          main { margin-left: 220px; width: calc(100% - 220px); padding: 2rem; }
        .cards1 {
-       width: 522px;
+        width: 522px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -308,7 +311,7 @@ img {
             main { margin-left: 0; width: 100%; padding: 1.5rem; }
         }
   @media (max-width: 575px) {     
-        h1, h2 {
+      h1, h2 {
         font-size: clamp(1.8rem, 7vw, 2.4rem);  /* headings don't become too big */
     }
 
@@ -345,12 +348,12 @@ img {
         padding: 0.9rem;
         font-size: 0.95rem;
     }
-     .hir{
+    .hir{
     padding: 0px 80px;
    }
    
   .skills{
-    width:40px;
+    width:100%;
   }
   .cards1 {
         width: 278px;
@@ -368,4 +371,6 @@ section { margin-bottom: 1rem;}
               
       
        }
+/*responsive stop*/
+
 /*responsive stop*/
