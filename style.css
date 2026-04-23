@@ -286,10 +286,7 @@ img {
     
     p {   font-size: 0.9rem !important; }
         
-        @media (max-width: 1024px) {
-            aside { width: 220px; }
-            main { margin-left: 220px; width: calc(100% - 220px); padding: 2rem; }
-       }
+       
     
         @media (max-width: 768px) {
             .container { flex-direction: column; }
