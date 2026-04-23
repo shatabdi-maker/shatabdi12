@@ -279,8 +279,7 @@ img {
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            font-weight: 600;
-          
+            font-weight: 600; 
         }
         button:hover { background:  #624870; }
    h3 { font-size: 1.3rem !important;}
@@ -296,12 +295,9 @@ img {
             aside { position: static; width: 100%; height: auto; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
             main { margin-left: 0; width: 100%; padding: 1.5rem; }
         }
-
-    
  
-  
        @media (max-width: 575px) {     
-    h1, h2 {
+        h1, h2 {
         font-size: clamp(1.8rem, 7vw, 2.4rem);  /* headings don't become too big */
     }
 
@@ -322,7 +318,7 @@ img {
         gap: 1.2rem;                    /* tighter grid spacing */
     }
 
-    .card{margin-right:40px;    }
+    .card{margin-right:40px; }
      
     nav a {
         padding: 0.7rem 0.9rem;
@@ -355,7 +351,8 @@ img {
 
 .image{ padding: 30px 22px;}
 .logoim{ margin-top:-99px; }
-.info p { font-size: 10px;}
+.info p { font-size: 10px !important;
+}
       
        }
 /*responsive stop*/
