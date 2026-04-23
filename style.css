@@ -348,6 +348,7 @@ img {
         gap: 20px;
         margin-left: -23px;
     }
+section { margin-bottom: 1rem;}
 
 .image{ padding: 30px 22px;}
 .logoim{ margin-top:-99px; }
