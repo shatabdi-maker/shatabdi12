@@ -157,6 +157,12 @@ img {
     border-top: 2px solid rgba(153, 143, 154, 0.02);
     background: linear-gradient(180deg, transparent, rgba(218, 198, 212, 0.04));
 }
+.client{
+  margin-top: 30px;
+}
+section {
+    margin-bottom: 1rem;
+}
 .tag:hover{ border-bottom:  3px solid #666067;
 }
 .view{
@@ -287,7 +293,54 @@ img {
     
     p {   font-size: 0.9rem !important; }
         
-       
+         .fun-fact-section {
+  padding: 0px 20px;
+}
+
+.fun-fact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fun-label {
+  color: #a855f7;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.fun-fact-section h2 {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.fun-facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.fun-item {
+    padding: 25px 15px;
+    border-top: 2px solid #94a3b8;
+    border-bottom: 2px solid #94a3b8;
+    background-color: #531745;
+}
+
+.fun-item h3 {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.fun-item p {
+  color: #cbd5e1;
+  font-size: 15px;
+}
   /* =========================
    MOBILE RESPONSIVE FIX
 ========================= */
@@ -298,7 +351,7 @@ img {
         width: 522px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 33px;
         margin-left: -22px;
            }
        .info p { font-size: 10px !important;
@@ -331,10 +384,17 @@ img {
     .grid {
         gap: 1.2rem;                    /* tighter grid spacing */
     }
+     .fun-facts {
+    grid-template-columns: 1fr;
+  }
 
-    .card{margin-right:40px; }
+  .fun-fact-section h2 {
+    font-size: 26px;
+  }
+
+.card{margin-right:40px; }
      
-    nav a {
+ nav a {
         padding: 0.7rem 0.9rem;
         font-size: 0.95rem;
     }
