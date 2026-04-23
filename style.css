@@ -98,7 +98,7 @@
             .cards1 {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
     .card1 {
@@ -110,13 +110,13 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    height: 340px;
+    height: 541px;
     border-left: 3px solid  rgba(214, 204, 212, 0.6) ;
 }
-.card1:hover{    box-shadow: 0 10px 10px rgba(178, 94, 163, 0.6);
+.card1:hover{    box-shadow: 0 10px 10px rgb(61 0 50);
 }
 .thumb {
-    height: 56%;
+    height: 31%;
     overflow: hidden;
     background: #0b1220;
 
@@ -143,6 +143,10 @@ img {
     flex-direction: column;
     gap: 8px;
     flex: 1;
+       height:18px;
+}
+.info p {
+    font-size: 12px;
 }
 .meta {
     display: flex;
