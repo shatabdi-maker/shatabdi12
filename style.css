@@ -336,10 +336,52 @@ section {
   color: #fff;
   margin-bottom: 8px;
 }
+.counter {
+  display: inline-block;
+  font-weight: 700;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
 .fun-item p {
   color: #cbd5e1;
   font-size: 15px;
+}
+/*WhatsApp Floating Button*/
+
+.whatsapp-float {
+  position: fixed;
+  right: 72px;
+  bottom: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  background: #25d366;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 1000px;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.28);
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(37, 211, 102, 0.35);
+  background: #1fbe5b;
+}
+
+.whatsapp-float i {
+  font-size: 22px;
+}
+
+.whatsapp-float span {
+  white-space: nowrap;
 }
   /* =========================
    MOBILE RESPONSIVE FIX
@@ -362,6 +404,18 @@ section {
             .container { flex-direction: column; }
             aside { position: static; width: 100%; height: auto; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
             main { margin-left: 0; width: 100%; padding: 1.5rem; }
+                 .whatsapp-float {
+             right: 16px;
+             bottom: 16px;
+             padding: 11px 15px;
+             font-size: 13px;
+             gap: 8px;
+            }
+
+         .whatsapp-float i {
+             font-size: 20px;
+            }
+    }
         }
   @media (max-width: 575px) {     
       h1, h2 {
