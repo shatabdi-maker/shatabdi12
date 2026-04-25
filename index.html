@@ -359,6 +359,29 @@ document.getElementById("contactForm").addEventListener("submit", function(e){
         }, speed);
       });
     }
+      // Trigger animation when section comes into view
+    const observerOptions = {
+      threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+          entry.target.classList.add('animated');
+          startCounters();
+        }
+      });
+    }, observerOptions);
+
+    const funFactSection = document.querySelector('.fun-fact-section');
+    if (funFactSection) {
+      observer.observe(funFactSection);
+    }
+
+    /*mail*/
+   (function(){
+    emailjs.init("6nqY6Brr_VWrZEvwa");
+})();
 
   </script>
   <!--watsapp-->
