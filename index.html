@@ -43,29 +43,33 @@
             <button class="btn cv-btn" onclick="viewCV()"> Resume</button>
             <button class="btn cv-btn" onclick="downloadCV()">Download Resume </button>
         </section>
- <!--  total project -->
+    <!--  total project -->
   <section class="fun-fact-section">
   <div class="fun-fact-container">
     <h2>A Few Things About My Work</h2>
 
     <div class="fun-facts">
-      <div class="fun-item"style="bg-">
-        <h3>10+</h3>
+      <div class="fun-item">
+        <h3 class="counter" data-target="10">0</h3>
+        <span style="position: relative; top: -8px;">+</span>
         <p>Projects Completed</p>
       </div>
 
       <div class="fun-item">
-        <h3>100%</h3>
+        <h3 class="counter" data-target="100">0</h3>
+        <span style="position: relative; top: -8px;">%</span>
         <p>Responsive Design Focus</p>
       </div>
 
       <div class="fun-item">
-        <h3>6+</h3>
+        <h3 class="counter" data-target="6">0</h3>
+        <span style="position: relative; top: -8px;">+</span>
         <p>Technologies Used</p>
       </div>
 
-      <div class="fun-item" >
-        <h3>24/7</h3>
+      <div class="fun-item">
+        <h3 class="counter" data-target="24">0</h3>
+        <span style="position: relative; top: -8px;">/<wbr>7</span>
         <p>Passion for Learning</p>
       </div>
     </div>
@@ -333,8 +337,32 @@ document.getElementById("contactForm").addEventListener("submit", function(e){
         console.log("EmailJS error:", error);
     });
 });
+ // Animated Counter
+    function startCounters() {
+      const counters = document.querySelectorAll('.counter');
+      const speed = 150; // milliseconds per increment
+      
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        let current = 0;
+        
+        const increment = Math.ceil(target / (1500 / speed));
+        
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            counter.textContent = target;
+            clearInterval(timer);
+          } else {
+            counter.textContent = current;
+          }
+        }, speed);
+      });
+    }
 
   </script>
-
+  <!--watsapp-->
+  <a href="https://wa.me/8801833062072" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i></a>
 </body>
 </html>
