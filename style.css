@@ -216,6 +216,7 @@ section {
             display: flex;
             animation: scroll 10s linear infinite;
             width: max-content;
+            padding: 10px 0px;
         }
         .slider-track img {
             height: 60px;
